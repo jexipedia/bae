@@ -351,3 +351,8 @@ window.addEventListener("resize", function () {
 });
 
 window.requestAnimationFrame(draw);
+
+document.addEventListener('click', () => {
+  audio.muted = false;
+  audio.play().catch(error => console.log('Unmute failed:', error));
+});
