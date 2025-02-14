@@ -329,11 +329,27 @@
       <button id="valentinesButton">Click Me! ❤</button>
       <script src="script.js"></script>
 
-      <audio controls autoplay>
-        <source src="All I Ever Need   Austin Mahone.mp3" type="audio/ogg" />
-        <source src="All I Ever Need   Austin Mahone.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
+      <audio id="backgroundAudio" autoplay muted>
+        <source src="All-I-Ever-Need-Austin-Mahone.mp3" type="audio/mpeg">
+        Your browser does not support audio playback.
+    </audio>
+
+    <!-- Unmute Logic -->
+    <script>
+        const audio = document.getElementById('backgroundAudio');
+        
+        // Unmute audio after ANY user interaction (click/tap)
+        document.addEventListener('click', () => {
+            audio.muted = false;
+        });
+
+        // Optional: Attempt to autoplay with sound (may fail)
+        window.addEventListener('DOMContentLoaded', () => {
+            audio.play().catch(error => {
+                console.log('Autoplay blocked:', error);
+            });
+        });
+    </script>
     </section>
   </body>
 </html>
