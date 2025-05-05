@@ -268,7 +268,7 @@ function drawText() {
     if (window.innerWidth < 600) {
       drawTextWithLineBreaks(
         [
-          "I love you so much YOSAN, more than",
+          "I love you so much Name here, more than",
           "all the time and space in the universe can contain",
         ],
         canvas.width / 2,
